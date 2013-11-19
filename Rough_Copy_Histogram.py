@@ -1,6 +1,7 @@
 import Tkinter
 import Image, ImageTk, ImageDraw
 import math
+import sys
 
 def showxy(event):
 	data = event.x, event.y
@@ -34,7 +35,8 @@ def dragging(event, arg):
 	img.putalpha(mask)
 	img.paste(draw, mask)
 
-image_file = "coat.png"
+
+image_file = str(sys.argv[1])
 
 w = Tkinter.Tk()
 
